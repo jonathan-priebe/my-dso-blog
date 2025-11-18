@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--ifm-color-primary);
+  padding: 1rem 0;
+  color: white;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbarItem {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbarItem:hover {
+  text-decoration: underline;
+}

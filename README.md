@@ -27,13 +27,15 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 - [pnpm](https://pnpm.io/) (package manager for faster and more efficient dependency handling)
 - [Docker](https://www.docker.com/products/docker-desktop) (only required if [deploying using NGINX](#deploying-using-nginx))
 
-1. Installation
+### How to Start
+
+1. **Installation**
 
    ```
    $ pnpm install
    ```
 
-2. Local Development
+2. **Local Development**
 
    ```
    $ pnpm start
@@ -41,7 +43,7 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 
    This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-3. Build
+3. **Build**
 
    ```
    $ pnpm build
@@ -49,7 +51,7 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 
    This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-4. Deployment
+4. **Deployment**
 
    In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). After that is ensured run the following command to deploy:
 
@@ -58,6 +60,32 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
    ```
 
 For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
+
+## Usage
+
+This Docusaurus project is designed to be easily configurable. Here’s how you can modify different parts of the website:
+
+### Modifying Portfolio Content
+
+The main portfolio page is located at `src/pages/index.tsx`. This file is composed of several React components that form the different sections of the portfolio.
+
+To modify the content of a specific section, you need to edit the corresponding component in the `src/components` directory. Each component has its own folder and consists of an `index.tsx` file for the component logic and a `styles.module.css` file for the styling.
+
+Here is a list of the components used in the portfolio:
+
+- **Header**: `src/components/header/index.tsx`
+- **Hero Section**: `src/components/hero/index.tsx`
+- **My Skills**: `src/components/my-skills/index.tsx`
+- **Project Highlights**: `src/components/my-project-highlights/index.tsx`
+- **Contact Form**: `src/components/contact/index.tsx`
+- **Footer**: `src/components/footer/index.tsx`
+
+By editing these files, you can change the text, images, and overall appearance of the portfolio.
+
+### Adding New Blog Posts or Documentation
+
+- **Blog Posts**: To add a new blog post, create a new markdown file in the `blog/` directory. The file name should follow the format `YYYY-MM-DD-your-post-title.md`.
+- **Documentation**: To add new documentation, create a new markdown file in the `docs/` directory and add a reference to it in `sidebars.ts`.
 
 ## Repository Structure
 

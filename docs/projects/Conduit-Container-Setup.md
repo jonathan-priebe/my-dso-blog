@@ -1,0 +1,110 @@
+# Conduit-Container-Setup
+This repository provides a complete Docker-based setup for the RealWorld Conduit App, featuring an Angular frontend and a Django backend. It's designed to offer a ready-to-run development and testing environment—perfect for learning, collaboration, or building your own fullstack applications.
+
+## Project Handover  
+
+📄 [Conduit Container Checkliste PDF](<./Conduit Container Checkliste.pdf>)
+📄 [Conduit Deployment Checkliste PDF](<./Conduit Deployment Checkliste.pdf>)
+
+---
+
+## Table of Contents  
+- [Prerequisites](#prerequisites)  
+- [Quickstart](#quickstart)  
+- [Usage](#usage)
+- - [Pipelines](#pipelines)  
+- [Me](#me)
+
+---
+
+## Prerequisites  
+Before running this project, make sure the following tools are installed on your system:
+
+| Tool            | Version Recommendation | Purpose                              |
+|-----------------|------------------------|--------------------------------------|
+| [Git](https://git-scm.com/)            | ≥ 2.30                 | Clone the repository                 |
+| [Docker](https://www.docker.com/)      | ≥ 24.0                 | Container runtime                    |
+| [Docker Compose](https://docs.docker.com/compose/) | ≥ 2.20 | Orchestrate multi-container setup   |
+
+> 💡 Tip: Run `docker -v`, `docker compose version`, and `git --version` to verify your environment.
+
+---
+
+## Quickstart  
+
+1. **Clone the repository**
+
+    ```bash
+    git clone --recurse-submodules https://github.com/Jonathan-Priebe/Conduit-Container-Setup.git
+    cd Conduit-Container-Setup
+    ```
+
+All key settings are controlled via environment variables and Docker volumes. You can adjust them in the [Docker-Compose](./docker-compose.yml) file.
+
+> ℹ️ To get started, copy the [example environment file](./example.env):
+> ```bash
+> cp example.env .env
+> ```
+> Then adjust the values to match your desired setup.
+
+2. **Run Container with Docker Compose**
+
+  ```bash
+  docker compose up --build -d
+  ```
+  - Environment variables are loaded from your .env file
+
+  - You can customize and exposed ports
+
+  - To stop the server:
+
+  ```bash
+  docker compose down
+  ```
+
+  ## Usage  
+  
+  1. **Environment Configuration**
+  
+  Edit .env to define your Conduit-Backend and Frontend settings and Admin Interface in [example.env](example.env)
+
+  2. **Customize the following variables to match your desired setup**
+
+---
+
+### ⚙️ Django Settings
+
+| Variable                   | Description                                      |
+|----------------------------|--------------------------------------------------|
+| `DJANGO_SUPERUSER_USERNAME` | Username for Django admin user                 |
+| `DJANGO_SUPERUSER_EMAIL`    | Email address for Django admin user            |
+| `DJANGO_SUPERUSER_PASSWORD` | Password for Django admin user                 |
+| `SECRET_KEY_Django`         | Secret key for Django cryptographic signing    |
+| `API_URL`                   | Base path for backend API # Only for building  |
+
+---
+
+### 🌐 Server & CORS Settings
+
+| Variable               | Description                                      |
+|------------------------|--------------------------------------------------|
+| `IP_ADDR`              | Public IP address of your server                |
+| `CORS_ALLOWED_ORIGINS`| Allowed origin for frontend requests             |
+
+---
+
+3. **🚀 Access Conduit App/Interface**
+
+- Once running, access the **Angular Frontend** at:
+```bash
+http://YOUR_IP_OR_DOMAIN:YOUR_FRONTEND_PORT
+```
+
+### Pipelines
+
+For a Pipeline documentation visit [Workflows.md](.github/workflows/Workflows.md)
+
+## Me  
+
+- Created and maintained by Jonathan 
+- 📫 Reach me via GitHub or [LinkedIn](https://www.linkedin.com/in/jonathan-p-34471b1a5/)

@@ -1,49 +1,25 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/guides/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-          <></>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/projects/overview">
-            To my Projects
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import Header from '@site/src/components/header';
+import Hero from '@site/src/components/hero';
+import MySkills from '@site/src/components/my-skills';
+import MyProjectHighlights from '@site/src/components/my-project-highlights';
+import Contact from '@site/src/components/contact';
+import Footer from '@site/src/components/footer';
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title="Portfolio"
+      description="My personal portfolio">
+      <Header />
       <main>
-        <HomepageFeatures />
+        <Hero />
+        <MySkills />
+        <MyProjectHighlights />
+        <Contact />
       </main>
+      <Footer />
     </Layout>
   );
 }

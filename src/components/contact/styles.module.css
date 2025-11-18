@@ -1,0 +1,50 @@
+.contactSection {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contactInfo {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.contactInfo a {
+  color: white;
+  text-decoration: underline;
+}
+
+.contactForm {
+  margin-top: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: var(--ifm-background-color);
+  border-radius: 8px;
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.contactForm h3 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.contactForm textarea {
+  resize: vertical;
+}
+
+.contactForm button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+}
