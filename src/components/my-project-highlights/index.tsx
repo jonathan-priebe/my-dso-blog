@@ -142,6 +142,27 @@ export default function MyProjectHighlights(): JSX.Element {
   const [selectedProject, setSelectedProject] = useState<ProjectProps>(DesktopProjectList[3]); // Start with Minecraft
   const [clickedProjects, setClickedProjects] = useState<Set<number>>(new Set([DesktopProjectList[3].id])); // Track clicked projects
 
+  // Convert all image paths with useBaseUrl BEFORE rendering
+  const projectsWithBasePath = DesktopProjectList.map(project => ({
+    ...project,
+    image: useBaseUrl(project.image),
+    technologies: project.technologies.map(tech => ({
+      ...tech,
+      icon: useBaseUrl(tech.icon)
+    }))
+  }));
+
+  const mobileProjectsWithBasePath = MobileProjectList.map(project => ({
+    ...project,
+    image: useBaseUrl(project.image),
+    technologies: project.technologies.map(tech => ({
+      ...tech,
+      icon: useBaseUrl(tech.icon)
+    }))
+  }));
+
+  const currentSelectedProject = projectsWithBasePath.find(p => p.id === selectedProject.id) || projectsWithBasePath[3];
+
   const handleProjectClick = (project: ProjectProps) => {
     setSelectedProject(project);
     setClickedProjects(prev => new Set(prev).add(project.id));
@@ -156,7 +177,7 @@ export default function MyProjectHighlights(): JSX.Element {
         <div className={`${styles.projectsLayout} ${styles.desktopView}`}>
           {/* Left side - Project List */}
           <div className={styles.projectList}>
-            {DesktopProjectList.map((project, idx) => (
+            {projectsWithBasePath.map((project, idx) => (
               <button
                 key={project.id}
                 className={`${styles.projectListItem} ${clickedProjects.has(project.id) ? styles.projectListItemActive : ''}`}
@@ -186,11 +207,11 @@ export default function MyProjectHighlights(): JSX.Element {
           {/* Right side - Project Detail */}
           <div className={styles.projectCard}>
             <div className={styles.projectCardHeader}>
-              <h3 className={styles.projectTitle}>{selectedProject.title}</h3>
+              <h3 className={styles.projectTitle}>{currentSelectedProject.title}</h3>
               <div className={styles.projectTechBadges}>
-                {selectedProject.technologies.map((tech, idx) => (
+                {currentSelectedProject.technologies.map((tech, idx) => (
                   <div key={idx} className={styles.techBadge}>
-                    <img src={useBaseUrl(tech.icon)} alt={tech.name} className={styles.techIcon} />
+                    <img src={tech.icon} alt={tech.name} className={styles.techIcon} />
                     <span>{tech.name}</span>
                   </div>
                 ))}
@@ -199,18 +220,18 @@ export default function MyProjectHighlights(): JSX.Element {
 
             <div className={styles.projectContent}>
               <div className={styles.projectImage}>
-                <img src={useBaseUrl(selectedProject.image)} alt={selectedProject.title} />
+                <img src={currentSelectedProject.image} alt={currentSelectedProject.title} />
               </div>
               <div className={styles.projectTextArea}>
-                <p className={styles.projectDescription}>{selectedProject.description}</p>
+                <p className={styles.projectDescription}>{currentSelectedProject.description}</p>
                 <div className={styles.projectActions}>
-              {selectedProject.documentationLink && (
-                <Link to={selectedProject.documentationLink} className={styles.btnDocumentation}>
+              {currentSelectedProject.documentationLink && (
+                <Link to={currentSelectedProject.documentationLink} className={styles.btnDocumentation}>
                   Documentation
                 </Link>
               )}
-              {selectedProject.githubLink && (
-                <Link to={selectedProject.githubLink} className={styles.btnGithub}>
+              {currentSelectedProject.githubLink && (
+                <Link to={currentSelectedProject.githubLink} className={styles.btnGithub}>
                   GitHub
                 </Link>
               )}
@@ -222,7 +243,7 @@ export default function MyProjectHighlights(): JSX.Element {
 
         {/* Mobile view - Minecraft, Conduit, WordPress */}
         <div className={styles.mobileView}>
-          {MobileProjectList.map((project, idx) => (
+          {mobileProjectsWithBasePath.map((project, idx) => (
             <div key={project.id} className={styles.projectCard}>
               <div className={styles.projectCardHeader}>
                 <h3 className={styles.projectTitle}>
@@ -231,7 +252,7 @@ export default function MyProjectHighlights(): JSX.Element {
                 <div className={styles.projectTechBadges}>
                   {project.technologies.map((tech, techIdx) => (
                     <div key={techIdx} className={styles.techBadge}>
-                      <img src={useBaseUrl(tech.icon)} alt={tech.name} className={styles.techIcon} />
+                      <img src={tech.icon} alt={tech.name} className={styles.techIcon} />
                       <span>{tech.name}</span>
                     </div>
                   ))}
@@ -240,7 +261,7 @@ export default function MyProjectHighlights(): JSX.Element {
 
               <div className={styles.projectContent}>
                 <div className={styles.projectImageWrapper}>
-                  <img src={useBaseUrl(project.image)} alt={project.title} className={styles.projectImage} />
+                  <img src={project.image} alt={project.title} className={styles.projectImage} />
                 </div>
                 <div className={styles.projectInfo}>
                   <p className={styles.projectDescription}>{project.description}</p>
