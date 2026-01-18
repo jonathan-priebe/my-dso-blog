@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 export default function Hero(): JSX.Element {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
+
+    const closeIcon = useBaseUrl('/img/portfolio/mobile/close.svg');
+    const menuIcon = useBaseUrl('/img/portfolio/mobile/menu_mob.svg');
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -34,10 +38,10 @@ export default function Hero(): JSX.Element {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? ( 
-                <img src="/img/portfolio/mobile/close.svg" alt="close menu" /> 
-            ) : ( 
-                <img src="/img/portfolio/mobile/menu_mob.svg" alt="open menu" /> 
+            {mobileMenuOpen ? (
+                <img src={closeIcon} alt="close menu" />
+            ) : (
+                <img src={menuIcon} alt="open menu" />
             )}
           </button>
           <div ref={menuRef} className={`${styles.heroNav} ${mobileMenuOpen ? styles.heroNavOpen : ''}`}>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 export default function Hero(): JSX.Element {
+  const profileImage = useBaseUrl('/img/portfolio/dummy-avatar.png');
 
   return (
     <section className={styles.heroBanner}>
@@ -31,7 +33,7 @@ export default function Hero(): JSX.Element {
           </div>
           <div className={styles.heroImage}>
             <img
-              src="/img/portfolio/dummy-avatar.png"
+              src={profileImage}
               alt="Jonathan Priebe"
               className={styles.profileImage}
             />
