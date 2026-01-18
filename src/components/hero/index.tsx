@@ -1,24 +1,43 @@
-import React from 'react';
-import clsx from 'clsx';
+import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 
 export default function Hero(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Explore My Docs - 5min ⏱️
-          </Link>
+    <section className={styles.heroBanner}>
+      <div className={styles.heroContainer}>
+        <div className={styles.heroMain}>
+          <div className={styles.heroTextContainer}>
+            <div className={styles.heroText1}>
+                <h2 className={styles.greeting}>Hey there. 👋 I am</h2>
+                <h1 className={styles.name}>Jonathan Priebe</h1>
+                <p className={styles.title} style={{ marginBottom: '0px' }}>Full Stack Developer & DevSecOps Engineer</p>
+            </div>
+            <div className={styles.heroText2}>
+                <p className={styles.description}>
+                  I am a passionate developer with expertise in building modern web applications
+                  and implementing secure DevOps practices. I love creating efficient solutions
+                  and learning new technologies.
+                </p>
+                <div className={styles.heroCta}>
+                  <Link
+                    className={styles.ctaButton}
+                    to="#contact">
+                    Contact Me
+                  </Link>
+                </div>
+            </div>
+          </div>
+          <div className={styles.heroImage}>
+            <img
+              src="/img/portfolio/dummy-avatar.png"
+              alt="Jonathan Priebe"
+              className={styles.profileImage}
+            />
+          </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }

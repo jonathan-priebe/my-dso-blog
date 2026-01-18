@@ -1,114 +1,30 @@
 .contactSection {
-  background: #262e34;
-  padding: 72px 120px;
-  min-height: 10vh;
-  margin: 0;
-  border: none;
-  outline: none;
+  background-color: var(--portfolio-dark-bg);
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .contactContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .sectionTitle {
-  color: white;
-  font-size: 64px;
+  color: var(--portfolio-text-light);
+  font-size: 2.5rem;
   font-weight: 700;
-  text-align: left;
-  margin-bottom: 3rem;
-}
-
-.clickableE {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
-  position: relative;
-}
-
-.clickableE:hover {
-  color: #1976d2;
-  transform: scale(1.1);
-}
-
-.compactView {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10rem;
-  animation: fadeIn 0.5s ease;
-  align-items: start;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: -7rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  text-align: left;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.list li {
-  color: white;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.list li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: white;
-  font-weight: 600;
-}
-
-.contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contactItem {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1px 0rem;
-  background-color: transparent;
-  border-radius: 3rem;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.1s ease;
-}
-
-.contactItem:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1px 1px;
-  transform: translateY(-2px);
-}
-
-.contactItem img {
-  width: 24px;
-  height: 24px;
+  color: var(--portfolio-text-secondary);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .contactContent {
@@ -116,6 +32,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .infoItem {
@@ -206,33 +128,13 @@
   transform: translateY(-2px);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 996px) {
   .contactSection {
-    padding: 3rem 20px;
+    padding: 3rem 1rem;
   }
 
   .sectionTitle {
-    font-size: 2.5rem;
-  }
-
-  .compactView {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .right {
-    margin-top: 0;
+    font-size: 2rem;
   }
 
   .contactContent {

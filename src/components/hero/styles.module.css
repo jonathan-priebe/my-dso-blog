@@ -1,14 +1,132 @@
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  background: #266ad9;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
 }
 
-.buttons {
-  display: flex;
+.heroContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 120px 72px 120px;
+}
+
+.heroMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
+}
+
+.heroTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heroText1,
+.heroText2 {
+  color: white;
+  text-align: left;
+}
+
+.greeting {
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.name {
+  font-size: 4.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: white;
+  color: #266AD9;
+  padding: 0.875rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ctaButton:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #266AD9;
+}
+
+.heroImage {
+  display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  align-items: center;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 479px;
+  border-radius: 12px;
+}
+
+@media (max-width: 996px) {
+  .heroBanner {
+    min-height: auto;
+  }
+
+  .heroContainer {
+    padding: 1rem;
+  }
+
+  .heroMain {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .heroTextContainer {
+    display: contents;
+  }
+
+  .heroText1 {
+    order: -2;
+  }
+
+  .heroText2 {
+    order: 0;
+    margin: 0 0 40px 0;
+  }
+
+  .heroCta {
+    order: 1;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .heroImage {
+    order: -1;
+  }
+
+  .profileImage {
+    max-width: 300px;
+  }
 }

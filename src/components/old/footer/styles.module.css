@@ -1,12 +1,12 @@
 .footer {
   background: #262e34;
   padding: 48px 16px 64px;
-  margin: 0;
-  border: none;
-  outline: none;
+  width: 100%;
 }
 
 .container {
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,6 @@
 .scrollButton {
   width: 40px;
   height: 94px;
-  margin: 0 0 5rem 0;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   background: transparent;
@@ -38,15 +37,13 @@
 }
 
 .copyright {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
   color: #cfd8e3;
   margin-top: 8px;
 }
 
 .legalLink {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
   color: #cfd8e3;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -57,9 +54,16 @@
   color: #ffffff;
 }
 
+:global(#hero),
+:global(#my-skills),
+:global(#my-project-highlights),
+:global(#contact) {
+  scroll-margin-top: 80px;
+}
+
 @media (max-width: 996px) {
   .footer {
-    padding: 32px 20px 48px;
+    padding: 32px 16px 48px;
   }
 
   .scrollButton {

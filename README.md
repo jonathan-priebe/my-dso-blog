@@ -1,69 +1,119 @@
-# My Developer Blog
+# Jonathan Priebe - Portfolio
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A modern, responsive personal portfolio website built with Docusaurus, React, and TypeScript. This portfolio showcases my skills, projects, and provides multiple ways to get in touch.
 
-## Repository Description
+![Portfolio Preview](static/img/portfolio/preview.jpeg)
 
-This repository hosts a developer blog built with Docusaurus. It includes tools and scripts for creating, managing, and deploying static web content. The software supports rapid local development, customizable theming, and seamless deployment to platforms like GitHub Pages or NGINX.
+## Project Handover  
+
+📄 [Docusaurus Blog Checkliste PDF](<./Docusaurus-Blog-Checkliste.pdf>)
+
+## About
+
+This portfolio website demonstrates modern web development practices with a focus on:
+- Clean, responsive design with mobile-first approach
+- Interactive UI components with smooth animations
+- Type-safe development with TypeScript
+- Modular component architecture using CSS Modules
+- Professional presentation of skills and projects
 
 ## Table of Contents
 
-- [My Developer Blog](#my-developer-blog)
-  - [Repository Description](#repository-description)
-  - [Table of Contents](#table-of-contents)
-  - [Quickstart](#quickstart)
-    - [Prerequisites](#prerequisites)
-  - [Repository Structure](#repository-structure)
-  - [Deployment](#deployment)
-    - [Deploy to Github Pages](#deploy-to-github-pages)
-    - [Deploying using NGINX](#deploying-using-nginx)
-    - [Contributing](#contributing)
+- [About](#about)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Quickstart](#quickstart)
+- [Usage](#usage)
+  - [Development Commands](#development-commands)
+  - [Building for Production](#building-for-production)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Customization](#customization)
+- [Deployment](#deployment)
+  - [Deploy to GitHub Pages](#deploy-to-github-pages)
+  - [Deploying using NGINX](#deploying-using-nginx)
+- [Contact](#contact)
+
+## Features
+
+- **Custom Header Navigation**: Smooth scrolling navigation with mobile hamburger menu
+- **Hero Section**: Eye-catching introduction with profile image and key highlights
+- **Skills Showcase**: Interactive flip cards on desktop, horizontal scroll with grouped cards on mobile
+- **Project Highlights**: Desktop list view with detail cards, vertical mobile layout
+- **Contact Section**: Innovative toggle feature - click the "e" in "Contact Me" to switch between compact and expanded views
+- **Responsive Footer**: Clean design with scroll-to-top functionality and legal notice link
+- **Fully Responsive**: Optimized for all screen sizes with consistent 996px breakpoint
+- **Dark Theme**: Professional dark color scheme (#262e34) with blue accent (#2196f3)
+- **Custom Typography**: Quicksand font family for modern, clean appearance
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v18.0 or higher) - [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js) or **pnpm** (faster alternative)
+- **Git** - For version control
+
+To check your current versions:
+
+```bash
+node --version
+npm --version
+git --version
+```
 
 ## Quickstart
 
-### Prerequisites
+Get started with the portfolio in three simple steps:
 
-- [Node.js](https://nodejs.org/) (v16 or later recommended)
-- [pnpm](https://pnpm.io/) (package manager for faster and more efficient dependency handling)
-- [Docker](https://www.docker.com/products/docker-desktop) (only required if [deploying using NGINX](#deploying-using-nginx))
+### 1. Clone the repository
 
-### How to Start
+```bash
+git clone https://github.com/jonathan-priebe/my-dso-blog.git
+cd my-dso-blog
+```
 
-1. **Installation**
+### 2. Install dependencies
 
-   ```
-   $ pnpm install
-   ```
+```bash
+npm install
+# or
+pnpm install
+```
 
-2. **Local Development**
+### 3. Start the development server
 
-   ```
-   $ pnpm start
-   ```
+```bash
+npm start
+# or
+pnpm start
+```
 
-   This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-3. **Build**
-
-   ```
-   $ pnpm build
-   ```
-
-   This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-4. **Deployment**
-
-   In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). After that is ensured run the following command to deploy:
-
-   ```
-   $ USE_SSH=true pnpm deploy
-   ```
-
-For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
+The portfolio will open automatically at `http://localhost:3000`.
 
 ## Usage
 
-This Docusaurus project is designed to be easily configurable. Here’s how you can modify different parts of the website:
+### Development Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Starts the development server at `http://localhost:3000` |
+| `npm run build` | Builds the project for production in the `build` directory |
+| `npm run serve` | Serves the production build locally for testing |
+| `npm run clear` | Clears the Docusaurus cache |
+| `npm run deploy` | Deploys to GitHub Pages (if configured) |
+
+### Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+# or
+pnpm build
+```
+
+This generates static content into the `build` directory that can be served using any static hosting service.
 
 ### Modifying Portfolio Content
 
@@ -87,22 +137,87 @@ By editing these files, you can change the text, images, and overall appearance 
 - **Blog Posts**: To add a new blog post, create a new markdown file in the `blog/` directory. The file name should follow the format `YYYY-MM-DD-your-post-title.md`.
 - **Documentation**: To add new documentation, create a new markdown file in the `docs/` directory and add a reference to it in `sidebars.ts`.
 
-## Repository Structure
+## Project Structure
 
-The repository is organized as follows:
+```
+my-dso-blog/
+├── docs/                          # Documentation pages
+├── src/
+│   ├── components/                # React components
+│   │   ├── contact/              # Contact section with toggle feature
+│   │   │   ├── index.tsx
+│   │   │   └── styles.module.css
+│   │   ├── footer/               # Footer with scroll-to-top
+│   │   │   ├── index.tsx
+│   │   │   └── styles.module.css
+│   │   ├── header/               # Navigation header
+│   │   │   ├── index.tsx
+│   │   │   └── styles.module.css
+│   │   ├── hero/                 # Hero section
+│   │   │   ├── index.tsx
+│   │   │   └── styles.module.css
+│   │   ├── my-project-highlights/ # Project showcase
+│   │   │   ├── index.tsx
+│   │   │   └── styles.module.css
+│   │   └── my-skills/            # Skills section with flip cards
+│   │       ├── index.tsx
+│   │       └── styles.module.css
+│   ├── css/
+│   │   └── custom.css            # Global styles and theme
+│   └── pages/
+│       ├── index.tsx             # Homepage
+│       └── legal/                # Legal notice pages
+├── static/
+│   └── img/
+│       └── portfolio/            # Portfolio images and icons
+├── docusaurus.config.ts          # Docusaurus configuration
+├── package.json                  # Project dependencies
+├── tsconfig.json                 # TypeScript configuration
+└── README.md                     # This file
+```
 
-- `blog/`: Contains markdown files for blog posts. Blog-related metadata is automatically picked up by the Docusaurus configuration.
-- `docs/`: Contains markdown files for documentation. These files are referenced in `sidebars.ts` to define the sidebar structure.
-- `src/`: Contains custom React components, CSS, and JavaScript for additional functionality or theming.
-- `static/`: Stores static assets (e.g., images, icons) served directly without processing.
-- `sidebars.ts`: Configures the structure of sidebars in the documentation section.
-- `docusaurus.config.ts`: Main configuration file for customizing and managing Docusaurus behavior.
-- `build/`: Generated after running the `pnpm build` command. Contains the static website files ready for deployment.
+## Technologies Used
 
-New content can be added as follows:
+- **[Docusaurus](https://docusaurus.io/)** - Static site generator built with React
+- **[React](https://react.dev/)** - UI component library
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **CSS Modules** - Scoped and modular CSS
+- **[Quicksand Font](https://fonts.google.com/specimen/Quicksand)** - Modern, clean typography
 
-- Add new documentation files to the `docs/` folder.
-- Add new blog posts to the `blog/` folder. No additional configuration is required.
+### Key Technical Patterns
+
+- **React Hooks**: `useState` for interactive components (contact toggle, project selection)
+- **TypeScript Interfaces**: Type-safe props and component contracts
+- **CSS Grid & Flexbox**: Responsive layouts
+- **CSS Animations**: Smooth transitions and hover effects
+- **Mobile-First Design**: 996px breakpoint for desktop optimization
+
+## Customization
+
+### Changing Colors
+
+Edit the color scheme in `src/css/custom.css`:
+
+```css
+:root {
+  --ifm-color-primary: #2196f3;        /* Primary blue */
+  --portfolio-dark-bg: #1a1a1a;        /* Dark backgrounds */
+  --portfolio-card-bg: #2d2d2d;        /* Card backgrounds */
+}
+```
+
+### Updating Personal Information
+
+1. **Profile Image**: Replace `static/img/portfolio/hero/profile.jpg`
+2. **Contact Information**: Edit `src/components/contact/index.tsx`
+3. **Projects**: Update project data in `src/components/my-project-highlights/index.tsx`
+4. **Skills**: Modify skill cards in `src/components/my-skills/index.tsx`
+
+### Adding New Sections
+
+1. Create a new component folder: `src/components/your-section/`
+2. Add `index.tsx` and `styles.module.css`
+3. Import and add to `src/pages/index.tsx`
 
 ## Deployment
 
@@ -124,4 +239,47 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Deploying using NGINX
 
-To deploy the site using NGINX and Docker, follow this [guide](./docs/guides/deploy-docusaurus-with-docker-and-nginx.md)
+To deploy on an NGINX server:
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Copy the `build` directory to your server:
+   ```bash
+   scp -r build/* user@server:/var/www/html/portfolio/
+   ```
+
+3. Configure NGINX:
+   ```nginx
+   server {
+       listen 80;
+       server_name your-domain.com;
+       root /var/www/html/portfolio;
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+       }
+   }
+   ```
+
+4. Restart NGINX:
+   ```bash
+   sudo systemctl restart nginx
+   ```
+
+For detailed Docker deployment, follow this [guide](./docs/guides/deploy-docusaurus-with-docker-and-nginx.md).
+
+## Contact
+
+**Jonathan Priebe**
+
+- Email: [jonathan.priebe@gmx.de](mailto:jonathan.priebe@gmx.de)
+- LinkedIn: [linkedin.com/in/jonathan-priebe25](https://www.linkedin.com/in/jonathan-priebe25/)
+- GitHub: [github.com/jonathan-priebe](https://github.com/jonathan-priebe)
+
+---
+
+**Built with** ❤️ **using Docusaurus, React & TypeScript**

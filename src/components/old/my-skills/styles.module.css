@@ -1,0 +1,135 @@
+.skills {
+  background-color: var(--portfolio-dark-bg);
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.skillsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  color: var(--portfolio-text-light);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem; 
+  padding: 2rem;
+}
+
+.skillCard {
+  background-color: var(--portfolio-card-bg);
+  border-radius: 0.5rem; 
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease 0.1s;
+}
+
+.skillFront {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.skillBack {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.skillCard:hover .skillFront {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skillCard:hover .skillBack {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.skillUsageTitle {
+  color: var(--portfolio-text-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.skillUsageList {
+  color: var(--portfolio-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+}
+
+.skillCard:hover {
+  transform: translateY(-8px);
+  background-color: #909090;
+  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.3);
+}
+
+.skillIconWrapper {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto 1rem auto;
+}
+
+.skillImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.skillTitle {
+  width: 10rem;
+  margin: 0 auto 0.5rem auto;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--portfolio-text-light);
+}
+
+.skillDescription {
+  color: var(--portfolio-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 996px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}

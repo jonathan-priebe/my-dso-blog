@@ -5,9 +5,14 @@ import Link from '@docusaurus/Link';
 interface FooterProps {
   name: string;
   year?: number;
+  legalLabel?: string;
 }
 
-export default function Footer({ name, year = new Date().getFullYear() }: FooterProps): JSX.Element {
+export default function Footer({
+  name,
+  year = new Date().getFullYear(),
+  legalLabel = 'Legal notice',
+}: FooterProps): JSX.Element {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -32,7 +37,7 @@ export default function Footer({ name, year = new Date().getFullYear() }: Footer
         </div>
 
         <Link className={styles.legalLink} to="/legal">
-          Legal notice
+          {legalLabel}
         </Link>
       </div>
     </footer>

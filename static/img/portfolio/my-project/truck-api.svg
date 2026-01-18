@@ -1,0 +1,81 @@
+<svg width="320" height="216" viewBox="0 0 320 216" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <clipPath id="rounded">
+      <rect width="320" height="216" rx="30"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <rect width="320" height="216" fill="white"/>
+
+    <g transform="translate(0,0) scale(0.80) translate(20,10)">
+
+      <g fill="#0057A6">
+        <circle cx="80" cy="40" r="6"/>
+        <circle cx="110" cy="25" r="6"/>
+        <circle cx="140" cy="18" r="6"/>
+        <circle cx="170" cy="15" r="6"/>
+        <circle cx="200" cy="18" r="6"/>
+        <circle cx="230" cy="25" r="6"/>
+        <circle cx="260" cy="40" r="6"/>
+      </g>
+
+      <g fill="#D02027">
+        <path d="M40 110 L10 100 L60 60 L110 70 Z"/>
+        <path d="M38 130 L8 120 L58 82 L108 92 Z"/>
+        <path d="M36 150 L6 140 L56 104 L106 114 Z"/>
+      </g>
+
+      <g fill="#D02027">
+        <path d="M300 110 L330 100 L280 60 L230 70 Z"/>
+        <path d="M302 130 L332 120 L282 82 L232 92 Z"/>
+        <path d="M304 150 L334 140 L284 104 L234 114 Z"/>
+      </g>
+
+		<!-- TRUCK weiter nach links verschoben -->
+		<g transform="translate(110,60)">
+		<rect x="30" y="10" width="80" height="70" fill="#0057A6"/>
+		<rect x="38" y="18" width="32" height="24" fill="#FFFFFF"/>
+		<rect x="70" y="18" width="32" height="24" fill="#FFFFFF"/>
+		<rect x="68" y="18" width="4" height="24" fill="#0057A6"/>
+		<rect x="42" y="0" width="56" height="12" fill="#0057A6"/>
+		
+		<rect x="32" y="50" width="76" height="26" fill="#FFFFFF"/>
+		<rect x="36" y="54" width="68" height="4" fill="#0057A6"/>
+		<rect x="36" y="60" width="68" height="4" fill="#0057A6"/>
+		<rect x="36" y="66" width="68" height="4" fill="#0057A6"/>
+		<rect x="36" y="72" width="68" height="4" fill="#0057A6"/>
+		
+		<rect x="24" y="80" width="92" height="16" fill="#C0C4CC"/>
+		<rect x="24" y="82" width="10" height="8" fill="#FFD15C"/>
+		<rect x="106" y="82" width="10" height="8" fill="#FFD15C"/>
+		
+		<circle cx="40" cy="102" r="10" fill="#222"/>
+		<circle cx="100" cy="102" r="10" fill="#222"/>
+		<circle cx="40" cy="102" r="4" fill="#888"/>
+		<circle cx="100" cy="102" r="4" fill="#888"/>
+		</g>
+
+
+      <text x="170" y="200"
+            text-anchor="middle"
+            font-family="Impact, Arial Black, system-ui"
+            font-size="60"
+            fill="#D02027">
+        TRUCKS
+      </text>
+
+      <text x="170" y="240"
+            text-anchor="middle"
+            font-family="Brush Script MT, Pacifico, cursive"
+            font-size="40"
+            fill="#0057A6">
+        Signs
+      </text>
+
+    </g>
+  </g>
+
+  <rect width="320" height="216" rx="30" fill="none" stroke="#00000022" stroke-width="4"/>
+</svg>

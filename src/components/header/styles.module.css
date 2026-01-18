@@ -1,36 +1,112 @@
-.header {
-  background-color: var(--ifm-color-primary);
-  padding: 1rem 0;
-  color: white;
+html { 
+  scroll-behavior: smooth; 
 }
 
-.header .container {
+.heroBanner {
+  background: #266ad9;
+  min-height: 10vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 960px;
+  flex-direction: row;
+}
+
+.heroNavbar {
+  padding: 50px 0 30px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.navbarContainer {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.logo {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar {
+  padding: 0 104px;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
-.navbarItem {
+.mobileMenuButton {
+  display: none;
+}
+
+.mobileMenuButton:hover {
+  opacity: 0.8;
+}
+
+.heroNav {
+  display: flex;
+  gap: 2rem;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.navLink {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0rem 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.navbarItem:hover {
+.navLink:hover {
+  color: rgb(255, 255, 255);
   text-decoration: underline;
+}
+
+@media (max-width: 996px) {
+  .heroBanner {
+    justify-content: flex-end;
+    padding-right: 0%;
+    min-height: 0px;
+  }
+
+  .heroNavbar {
+  padding: 33px 32px 8px 0px;
+  background: rgba(0, 0, 0, 0);
+  }
+
+  .mobileMenuButton {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+  }
+
+  .navbarContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+  }
+
+  .heroNav {
+    position: absolute;
+    align-items: center;
+    top: -100%;
+    left: 0;
+    height: 35%;
+    width: 100%;
+    background-color: #ffffff;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    gap: 14px;
+    transition: top 0.6s ease;
+    z-index: 1000;
+  }
+
+  .heroNavOpen {
+    top: 0;
+  }
+
+  .navLink {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0rem 1rem;
+    color: #266AD9;
+  }
 }

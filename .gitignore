@@ -4,6 +4,7 @@
 # Production
 /build
 /need_and_stuff
+need_and_stuff
 
 # Generated files
 .docusaurus

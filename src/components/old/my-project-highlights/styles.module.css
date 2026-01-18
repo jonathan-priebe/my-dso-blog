@@ -1,0 +1,268 @@
+.projectHighlights {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.projectsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.projectsLayout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Left side - Project List */
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.projectListItem {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.projectListItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.projectListItemActive {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.projectNumber {
+  font-weight: 600;
+}
+
+.projectListTitle {
+  flex: 1;
+}
+
+.seeMoreLink {
+  color: white;
+  text-decoration: underline;
+  padding: 0.1rem 1rem;
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 0.01rem;
+  display: inline-block;
+}
+
+.seeMoreLink:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Right side - Project Card */
+.projectCard {
+  background-color: #4a5568;
+  border-radius: 16px;
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.projectCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.projectTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.projectTechBadges {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.techBadge {
+  background-color: white;
+  padding: 0.35rem 0.45rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2d3748;
+  max-width: 120px;
+}
+
+.techBadge span {
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.techIcon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.projectContent {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.projectImage {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 280px;
+}
+
+.projectImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projectTextArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectDescription {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.8;
+  white-space: pre-line;
+  margin: 0;
+}
+
+.projectActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btnDocumentation {
+  background-color: #2196f3;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btnDocumentation:hover {
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+}
+
+.btnGithub {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid white;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btnGithub:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 996px) {
+  .projectHighlights {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .projectsLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projectList {
+    order: 2;
+  }
+
+  .projectCard {
+    order: 1;
+    padding: 1.5rem;
+  }
+
+  .projectCardHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+
+  .projectContent {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projectActions {
+    flex-direction: column;
+  }
+
+  .btnDocumentation,
+  .btnGithub {
+    width: 100%;
+    text-align: center;
+  }
+}

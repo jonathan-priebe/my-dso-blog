@@ -1,70 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 
 export default function Contact(): JSX.Element {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const mailIcon = '/img/portfolio/contact-me/Mail-icon.svg';
-  const linkedinIcon = '/img/portfolio/contact-me/Linked-In-icon.svg';
-
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={styles.contactContainer}>
-        <h2 className={styles.sectionTitle}>
-          Contact M
-          <span
-            className={styles.clickableE}
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            e
-          </span>
-        </h2>
+        <h2 className={styles.sectionTitle}>Contact Me</h2>
+        <p className={styles.subtitle}>
+          Looking forward to hearing from you!
+        </p>
 
-        {!isExpanded ? (
-          // Compact View
-          <div className={styles.compactView}>
-            <div className={styles.left}>
-              <ul className={styles.list}>
-                <li>
-                  I'm always excited to connect about new opportunities and collaborations in web development and IT security.
-                </li>
-                <li>
-                  Feel free to reach out if you're looking for a dedicated developer ready to contribute, learn, and grow with your team.
-                </li>
-              </ul>
-            </div>
-
-            <div className={styles.right}>
-              <p className={styles.subtitle}>
-                Looking forward to hearing from you!
-              </p>
-              <div className={styles.contactInfo}>
-                <a
-                  href="mailto:jonathan.priebe@gmx.de"
-                  className={styles.contactItem}
-                >
-                  <img src={mailIcon} alt="Email" />
-                  jonathan.priebe@gmx.de
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/jonathan-priebe25/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.contactItem}
-                >
-                  <img src={linkedinIcon} alt="LinkedIn" />
-                  Profile Page
-                </a>
-              </div>
-            </div>
-          </div>
-        ) : (
-          // Expanded View (current design)
-          <>
-            <p className={styles.subtitle}>
-              Looking forward to hearing from you!
-            </p>
-
-            <div className={styles.contactContent}>
+        <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📧</div>
@@ -126,8 +72,6 @@ export default function Contact(): JSX.Element {
             </form>
           </div>
         </div>
-          </>
-        )}
       </div>
     </section>
   );

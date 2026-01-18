@@ -2,12 +2,10 @@
   background: #262e34;
   padding: 72px 120px;
   min-height: 10vh;
-  margin: 0;
-  border: none;
-  outline: none;
 }
 
 .contactContainer {
+  max-width: 1650px;
 }
 
 .sectionTitle {
@@ -219,7 +217,7 @@
 
 @media (max-width: 996px) {
   .contactSection {
-    padding: 3rem 20px;
+    padding: 3rem 1.5rem;
   }
 
   .sectionTitle {

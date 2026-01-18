@@ -1,0 +1,121 @@
+<svg width="320" height="216" viewBox="0 0 320 216" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Hintergrund + abgerundete Kanten wie Vorlage -->
+  <clipPath id="rounded">
+    <rect width="320" height="216" rx="30"/>
+  </clipPath>
+
+  <g clip-path="url(#rounded)">
+    
+    <!-- Hintergrund -->
+    <rect width="320" height="216" fill="#4FC3F7"/>
+
+    <!-- Radiale Strahlen -->
+    <g transform="translate(160,120)">
+      <g fill="#81D4FA">
+        <rect x="-8" y="-140" width="16" height="160"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(20)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(40)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(60)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(80)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(100)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(120)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(140)"/>
+        <rect x="-8" y="-140" width="16" height="160" transform="rotate(160)"/>
+      </g>
+    </g>
+
+    <!-- Himmel-Overlay -->
+    <rect width="320" height="130" fill="#4FC3F7" opacity="0.9"/>
+
+    <!-- Wolken -->
+    <g fill="#FFFFFF" opacity="0.95">
+      <path d="M45 45c6-6 14-7 21-3 3-6 10-9 17-7 6 2 10 7 11 13 7 0 13 4 15 10 2 6-1 13-7 16H45c-7-3-10-12-6-19 2-4 5-7 9-10z"/>
+      <path d="M210 40c5-5 12-7 19-4 4-6 11-9 18-7 6 2 10 6 12 12 6-1 13 2 16 8 3 6 1 14-4 18h-61c-6-3-9-11-7-17 1-4 4-7 7-10z"/>
+    </g>
+
+    <!-- Grüner Hügel -->
+    <path d="M0 140 C60 120 120 115 160 120 C210 125 270 135 320 150 L320 216 L0 216 Z" fill="#43A047"/>
+
+    <!-- Rote Pfütze -->
+    <ellipse cx="165" cy="152" rx="70" ry="20" fill="#D32F2F"/>
+
+	<!-- ECHTE JUICE SHOP PACKUNG (frontal, mit roter Fahne, Rot 1) -->
+	<g transform="translate(135,70)">
+	
+	<!-- Rote Fahne (Rot 1 = #D32F2F) -->
+	<rect x="48" y="-6" width="22" height="14" fill="#D32F2F" rx="2"/>
+	
+	<!-- Packungskörper -->
+	<rect x="0" y="0" width="70" height="95" rx="6"
+			fill="#FFEB3B" stroke="#F9A825" stroke-width="2"/>
+	
+	<!-- Rechte Seitenfläche -->
+	<path d="M70 0 L88 10 L88 100 L70 95 Z"
+			fill="#FDD835" stroke="#F9A825" stroke-width="2"/>
+	
+	<!-- Oberseite -->
+	<path d="M0 0 L18 -10 L88 10 L70 20 Z"
+			fill="#FFF176" stroke="#F9A825" stroke-width="2"/>
+	
+	<!-- Deckel (weiß) -->
+	<circle cx="52" cy="5" r="7"
+			fill="#F5F5F5" stroke="#BDBDBD" stroke-width="2"/>
+	
+	<!-- JS Logo -->
+	<text x="20" y="55"
+			font-family="Arial, system-ui"
+			font-weight="bold"
+			font-size="32"
+			fill="#212121">
+		JS
+	</text>
+	
+	<!-- Rote Pfütze unter der Packung -->
+	<ellipse cx="40" cy="108" rx="55" ry="14" fill="#D32F2F" opacity="0.9"/>
+	
+	</g>
+
+
+    <!-- Wespe links -->
+    <g transform="translate(95,70) rotate(-15)">
+      <ellipse cx="0" cy="0" rx="8" ry="5" fill="#212121"/>
+      <ellipse cx="7" cy="0" rx="6" ry="4" fill="#FBC02D"/>
+      <ellipse cx="12" cy="0" rx="4" ry="3" fill="#212121"/>
+      <rect x="3" y="-3" width="3" height="6" fill="#212121"/>
+      <ellipse cx="0" cy="-6" rx="7" ry="3" fill="#E1F5FE"/>
+      <ellipse cx="4" cy="-7" rx="6" ry="3" fill="#E1F5FE"/>
+      <path d="M-2 -2 Q-6 -8 -4 -10" stroke="#212121" stroke-width="1.2" fill="none"/>
+      <path d="M0 -2 Q-2 -9 0 -11" stroke="#212121" stroke-width="1.2" fill="none"/>
+    </g>
+
+    <!-- Wespe rechts oben -->
+    <g transform="translate(225,55) rotate(10)">
+      <ellipse cx="0" cy="0" rx="7" ry="4.5" fill="#212121"/>
+      <ellipse cx="6" cy="0" rx="5" ry="3.5" fill="#FBC02D"/>
+      <ellipse cx="11" cy="0" rx="3.5" ry="2.5" fill="#212121"/>
+      <rect x="2" y="-3" width="3" height="6" fill="#212121"/>
+      <ellipse cx="0" cy="-6" rx="6" ry="3" fill="#E1F5FE"/>
+      <ellipse cx="4" cy="-7" rx="5" ry="3" fill="#E1F5FE"/>
+      <path d="M-2 -2 Q-5 -8 -3 -10" stroke="#212121" stroke-width="1.1" fill="none"/>
+      <path d="M0 -2 Q-1 -9 1 -11" stroke="#212121" stroke-width="1.1" fill="none"/>
+    </g>
+
+    <!-- Wespe rechts unten -->
+    <g transform="translate(230,110) rotate(25)">
+      <ellipse cx="0" cy="0" rx="7" ry="4.5" fill="#212121"/>
+      <ellipse cx="6" cy="0" rx="5" ry="3.5" fill="#FBC02D"/>
+      <ellipse cx="11" cy="0" rx="3.5" ry="2.5" fill="#212121"/>
+      <rect x="2" y="-3" width="3" height="6" fill="#212121"/>
+      <ellipse cx="0" cy="-6" rx="6" ry="3" fill="#E1F5FE"/>
+      <ellipse cx="4" cy="-7" rx="5" ry="3" fill="#E1F5FE"/>
+      <path d="M-2 -2 Q-5 -8 -3 -10" stroke="#212121" stroke-width="1.1" fill="none"/>
+      <path d="M0 -2 Q-1 -9 1 -11" stroke="#212121" stroke-width="1.1" fill="none"/>
+    </g>
+
+  </g>
+
+  <!-- Sichtbarer Border oben drauf -->
+  <rect width="320" height="216" rx="30" fill="none" stroke="#00000022" stroke-width="4"/>
+
+</svg>
