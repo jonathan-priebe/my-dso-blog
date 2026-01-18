@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 export default function Contact(): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(false);
-  const mailIcon = '/img/portfolio/contact-me/Mail-icon.svg';
-  const linkedinIcon = '/img/portfolio/contact-me/Linked-In-icon.svg';
+  const mailIcon = useBaseUrl('/img/portfolio/contact-me/Mail-icon.svg');
+  const linkedinIcon = useBaseUrl('/img/portfolio/contact-me/Linked-In-icon.svg');
 
   return (
     <section id="contact" className={styles.contactSection}>

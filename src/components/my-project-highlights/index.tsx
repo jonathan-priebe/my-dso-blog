@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 interface Technology {
@@ -26,10 +27,10 @@ For example: Why are you proud of it?
 What were you able to implement here?
 What different algorithms, server architecture did you use?
 Why did you find this project so interesting?`,
-    image: '/img/portfolio/my-project/baby-shop.svg',
+    image: 'img/portfolio/my-project/baby-shop.svg',
     technologies: [
-      { name: 'Python', icon: '/img/portfolio/skills/python_logo.svg' },
-      { name: 'Container', icon: '/img/portfolio/skills/Docker_1_logo.svg' },
+      { name: 'Python', icon: 'img/portfolio/skills/python_logo.svg' },
+      { name: 'Container', icon: 'img/portfolio/skills/Docker_1_logo.svg' },
     ],
     documentationLink: '/docs/projects/baby-tools-shop',
     githubLink: 'https://github.com/jonathan-priebe/baby-tools-shop',
@@ -42,10 +43,10 @@ For example: Why are you proud of it?
 What were you able to implement here?
 What different algorithms, server architecture did you use?
 Why did you find this project so interesting?`,
-    image: '/img/portfolio/my-project/truck-api.svg',
+    image: 'img/portfolio/my-project/truck-api.svg',
     technologies: [
-      { name: 'Python', icon: '/img/portfolio/skills/python_logo.svg' },
-      { name: 'Shell scripting', icon: '/img/portfolio/skills/terminal-2_2logo.svg' },
+      { name: 'Python', icon: 'img/portfolio/skills/python_logo.svg' },
+      { name: 'Shell scripting', icon: 'img/portfolio/skills/terminal-2_2logo.svg' },
     ],
     documentationLink: '/docs/projects/truck_signs_api',
     githubLink: 'https://github.com/jonathan-priebe/truck_signs_api',
@@ -58,9 +59,9 @@ For example: Why are you proud of it?
 What were you able to implement here?
 What different algorithms, server architecture did you use?
 Why did you find this project so interesting?`,
-    image: '/img/portfolio/my-project/jucie-shop.svg',
+    image: 'img/portfolio/my-project/jucie-shop.svg',
     technologies: [
-      { name: 'IT Security', icon: '/img/portfolio/skills/it_sec_logo1.svg' },
+      { name: 'IT Security', icon: 'img/portfolio/skills/it_sec_logo1.svg' },
     ],
     documentationLink: '/docs/projects/hack-challenger',
     githubLink: 'https://github.com/jonathan-priebe/hack-challenger',
@@ -73,12 +74,12 @@ For example: Why are you proud of it?
 What were you able to implement here?
 What different algorithms, server architecture did you use?
 Why did you find this project so interesting?`,
-    image: '/img/portfolio/my-project/minecraft.svg',
+    image: 'img/portfolio/my-project/minecraft.svg',
     technologies: [
-      { name: 'Yaml', icon: '/img/portfolio/skills/Official_YAML_Logo_2.svg' },
-      { name: 'Shell scripting', icon: '/img/portfolio/skills/terminal-2_2logo.svg' },
-      { name: 'IT Security', icon: '/img/portfolio/skills/it_sec_logo1.svg' },
-      { name: 'Container', icon: '/img/portfolio/skills/Docker_1_logo.svg' },
+      { name: 'Yaml', icon: 'img/portfolio/skills/Official_YAML_Logo_2.svg' },
+      { name: 'Shell scripting', icon: 'img/portfolio/skills/terminal-2_2logo.svg' },
+      { name: 'IT Security', icon: 'img/portfolio/skills/it_sec_logo1.svg' },
+      { name: 'Container', icon: 'img/portfolio/skills/Docker_1_logo.svg' },
     ],
     documentationLink: '/docs/projects/Minecraft-Server',
     githubLink: 'https://github.com/jonathan-priebe/Minecraft-Server',
@@ -91,12 +92,12 @@ For example: Why are you proud of it?
 What were you able to implement here?
 What different algorithms, server architecture did you use?
 Why did you find this project so interesting?`,
-    image: '/img/portfolio/my-project/docker_conduit.svg',
+    image: 'img/portfolio/my-project/docker_conduit.svg',
     technologies: [
-      { name: 'Yaml', icon: '/img/portfolio/skills/Official_YAML_Logo_2.svg' },
-      { name: 'Shell scripting', icon: '/img/portfolio/skills/terminal-2_2logo.svg' },
-      { name: 'IT Security', icon: '/img/portfolio/skills/it_sec_logo1.svg' },
-      { name: 'Container', icon: '/img/portfolio/skills/Docker_1_logo.svg' },
+      { name: 'Yaml', icon: 'img/portfolio/skills/Official_YAML_Logo_2.svg' },
+      { name: 'Shell scripting', icon: 'img/portfolio/skills/terminal-2_2logo.svg' },
+      { name: 'IT Security', icon: 'img/portfolio/skills/it_sec_logo1.svg' },
+      { name: 'Container', icon: 'img/portfolio/skills/Docker_1_logo.svg' },
     ],
     documentationLink: '/docs/projects/Conduit-Container-Setup',
     githubLink: 'https://github.com/jonathan-priebe/conduit-container-setup',
@@ -109,12 +110,12 @@ For example: Why are you proud of it?
 What were you able to implement here?
 What different algorithms, server architecture did you use?
 Why did you find this project so interesting?`,
-    image: '/img/portfolio/my-project/wordpress.svg',
+    image: 'img/portfolio/my-project/wordpress.svg',
     technologies: [
-      { name: 'Yaml', icon: '/img/portfolio/skills/Official_YAML_Logo_2.svg' },
-      { name: 'Shell scripting', icon: '/img/portfolio/skills/terminal-2_2logo.svg' },
-      { name: 'IT Security', icon: '/img/portfolio/skills/it_sec_logo1.svg' },
-      { name: 'Container', icon: '/img/portfolio/skills/Docker_1_logo.svg' },
+      { name: 'Yaml', icon: 'img/portfolio/skills/Official_YAML_Logo_2.svg' },
+      { name: 'Shell scripting', icon: 'img/portfolio/skills/terminal-2_2logo.svg' },
+      { name: 'IT Security', icon: 'img/portfolio/skills/it_sec_logo1.svg' },
+      { name: 'Container', icon: 'img/portfolio/skills/Docker_1_logo.svg' },
     ],
     documentationLink: '/docs/projects/WordPress',
     githubLink: 'https://github.com/jonathan-priebe/WordPress',
@@ -189,7 +190,7 @@ export default function MyProjectHighlights(): JSX.Element {
               <div className={styles.projectTechBadges}>
                 {selectedProject.technologies.map((tech, idx) => (
                   <div key={idx} className={styles.techBadge}>
-                    <img src={tech.icon} alt={tech.name} className={styles.techIcon} />
+                    <img src={useBaseUrl(tech.icon)} alt={tech.name} className={styles.techIcon} />
                     <span>{tech.name}</span>
                   </div>
                 ))}
@@ -198,7 +199,7 @@ export default function MyProjectHighlights(): JSX.Element {
 
             <div className={styles.projectContent}>
               <div className={styles.projectImage}>
-                <img src={selectedProject.image} alt={selectedProject.title} />
+                <img src={useBaseUrl(selectedProject.image)} alt={selectedProject.title} />
               </div>
               <div className={styles.projectTextArea}>
                 <p className={styles.projectDescription}>{selectedProject.description}</p>
@@ -230,7 +231,7 @@ export default function MyProjectHighlights(): JSX.Element {
                 <div className={styles.projectTechBadges}>
                   {project.technologies.map((tech, techIdx) => (
                     <div key={techIdx} className={styles.techBadge}>
-                      <img src={tech.icon} alt={tech.name} className={styles.techIcon} />
+                      <img src={useBaseUrl(tech.icon)} alt={tech.name} className={styles.techIcon} />
                       <span>{tech.name}</span>
                     </div>
                   ))}
@@ -239,7 +240,7 @@ export default function MyProjectHighlights(): JSX.Element {
 
               <div className={styles.projectContent}>
                 <div className={styles.projectImageWrapper}>
-                  <img src={project.image} alt={project.title} className={styles.projectImage} />
+                  <img src={useBaseUrl(project.image)} alt={project.title} className={styles.projectImage} />
                 </div>
                 <div className={styles.projectInfo}>
                   <p className={styles.projectDescription}>{project.description}</p>

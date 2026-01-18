@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 interface SkillProps {
@@ -12,13 +13,13 @@ interface SkillProps {
 const SkillList: SkillProps[] = [
   {
     title: ['HTML'],
-    image: '/img/portfolio/skills/html5_logo.svg',
+    image: 'img/portfolio/skills/html5_logo.svg',
     description: 'Semantic HTML and modern web standards',
     usage: [ 'User-friendly navigation menus ', 'Responsive web design', 'Contact forms and login pages', 'Transitions, animations and hover effect', ],
   },
   {
     title: ['CSS'],
-    image: '/img/portfolio/skills/css_logo.svg',
+    image: 'img/portfolio/skills/css_logo.svg',
     description: 'Responsive design and animations',
     usage: [ 'Responsive layouts', 'Animations and transitions', 'Flexbox and Grid', 'Design system styling', ],
   },
@@ -31,38 +32,38 @@ const SkillList: SkillProps[] = [
   },
   {
     title: ['Python'],
-    image: '/img/portfolio/skills/python_logo.svg',
+    image: 'img/portfolio/skills/python_logo.svg',
     description: 'Backend development and scripting',
     usage: [ 'Build APIs', 'Web frameworks (Django, Flask)', 'Automation scripts', 'Software testing using libraries', ],
   },
   {
     title:['Shell', 'Scripting'],
-    image: '/img/portfolio/skills/terminal-2_logo.svg',
+    image: 'img/portfolio/skills/terminal-2_logo.svg',
     description: 'Package management',
     usage: [ 'Automation of tasks', 'System administration', 'Custom scripts', 'Environment setup', ],
   },
   {
     title: ['YAML'],
-    image: '/img/portfolio/skills/Official_YAML_Logo 1.svg',
+    image: 'img/portfolio/skills/Official_YAML_Logo 1.svg',
     description: 'Container orchestration',
     usage: [ 'Configuration files', 'Data serialization', 'CI/CD pipelines', 'Infrastructure as code', ],
   },
   {
     title: ['Container'],
-    image: '/img/portfolio/skills/Docker_1_logo.svg',
+    image: 'img/portfolio/skills/Docker_1_logo.svg',
     description: 'Containerization and deployment',
     usage: [ 'Dockerfile creation', 'Container orchestration', 'Microservices architecture', 'Environment consistency', ],
   },
   {
     title: ['CI/CD with', 'GitHub Actions'],
     mobileTitle: ['CI/CD'],
-    image: '/img/portfolio/skills/GitHub_Actions 1_logo.svg',
+    image: 'img/portfolio/skills/GitHub_Actions 1_logo.svg',
     description: 'Version control and collaboration',
     usage: [ 'Automated testing', 'Deployment pipelines', 'Linting and formatting', 'Release tagging', ],
   },
   {
     title: ['IT Security'],
-    image: '/img/portfolio/skills/it_sec_logo1.svg',
+    image: 'img/portfolio/skills/it_sec_logo1.svg',
     description: 'Application and infrastructure security',
     usage: [ 'simulate attacks and identify vulnerabilities', 'Setting up multi-factor authentication', 'login security', 'Incident response', ],
   },
@@ -70,13 +71,14 @@ const SkillList: SkillProps[] = [
 
 function Skill({ title, mobileTitle, image, description, usage }: SkillProps) {
   const displayTitle = mobileTitle || title;
+  const imageSrc = useBaseUrl(image);
 
   return (
     <div className={styles.skillCard}>
       <div className={styles.skillFront}>
         <div className={styles.skillIconWrapper}>
           <img
-            src={image}
+            src={imageSrc}
             alt={Array.isArray(title) ? title.join(' ') : title}
             className={styles.skillImage}
           />
