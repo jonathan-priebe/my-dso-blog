@@ -4,7 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 export default function Hero(): JSX.Element {
-  const profileImage = useBaseUrl('/img/portfolio/dummy-avatar.png');
+  const profileImage = useBaseUrl('/img/portfolio/jp_pic.jpg');
 
   return (
     <section className={styles.heroBanner}>

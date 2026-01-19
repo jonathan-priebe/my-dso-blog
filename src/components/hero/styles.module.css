@@ -69,9 +69,9 @@
 }
 
 .ctaButton:hover {
-  opacity: 0.8;
+  /*opacity: 0.8;*/
   text-decoration: none;
-  color: #266AD9;
+  background-color: #d4e1f7;
 }
 
 .heroImage {

@@ -10,13 +10,27 @@ html {
 }
 
 .heroNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 50px 0 30px;
-  background: rgba(0, 0, 0, 0);
+  background: #266ad9;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbarHidden {
+  transform: translateY(-100%);
+}
+
+.navbarVisible {
+  transform: translateY(0);
 }
 
 .navbarContainer {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto auto 0;
   padding: 0 104px;
   display: flex;
   align-items: center;
@@ -61,8 +75,14 @@ html {
   }
 
   .heroNavbar {
-  padding: 33px 32px 8px 0px;
-  background: rgba(0, 0, 0, 0);
+    position: relative;
+    padding: 33px 32px 8px 0px;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .navbarHidden,
+  .navbarVisible {
+    transform: none;
   }
 
   .mobileMenuButton {
@@ -83,7 +103,7 @@ html {
   }
 
   .heroNav {
-    position: absolute;
+    position: fixed;
     align-items: center;
     top: -100%;
     left: 0;
@@ -96,7 +116,7 @@ html {
     padding-top: 4rem;
     gap: 14px;
     transition: top 0.6s ease;
-    z-index: 1000;
+    z-index: 999
   }
 
   .heroNavOpen {
@@ -108,5 +128,9 @@ html {
     font-weight: 600;
     padding: 0rem 1rem;
     color: #266AD9;
+  }
+  .navLink:hover {
+  color: #3670ce;
+  text-decoration: underline;
   }
 }

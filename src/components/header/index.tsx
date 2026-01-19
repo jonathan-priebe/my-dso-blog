@@ -5,6 +5,8 @@ import styles from './styles.module.css';
 
 export default function Hero(): JSX.Element {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const menuRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -13,24 +15,43 @@ export default function Hero(): JSX.Element {
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if ( 
-                mobileMenuOpen && 
-                menuRef.current && 
+            if (
+                mobileMenuOpen &&
+                menuRef.current &&
                 buttonRef.current &&
-                !menuRef.current.contains(event.target as Node) && 
+                !menuRef.current.contains(event.target as Node) &&
                 !buttonRef.current.contains(event.target as Node)
-            ) { 
-                setMobileMenuOpen(false); 
-            } 
-        }; 
-    
-        document.addEventListener('mousedown', handleClickOutside); 
-        return () => document.removeEventListener('mousedown', handleClickOutside); 
+            ) {
+                setMobileMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
     }, [mobileMenuOpen]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY < lastScrollY || currentScrollY < 10) {
+                // Scrolling up or at top - show navbar
+                setIsVisible(true);
+            } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                // Scrolling down - hide navbar
+                setIsVisible(false);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
 
   return (
     <section className={styles.heroBanner}>
-      <nav className={styles.heroNavbar}>
+      <nav className={`${styles.heroNavbar} ${isVisible ? styles.navbarVisible : styles.navbarHidden}`}>
         <div className={styles.navbarContainer}>
           <button
             ref={buttonRef}

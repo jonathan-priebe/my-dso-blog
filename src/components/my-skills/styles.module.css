@@ -152,6 +152,9 @@
 
 .dotActive {
   background-color: #ffffff;
+  width: 18px;
+  height: 10px;
+  border-radius: 3rem;
 }
 
 @media (max-width: 996px) {
@@ -190,7 +193,7 @@
     padding-right: 1.5rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    margin-right: -1.5rem;
+    margin-right: -16px;
   }
 
   .skillsScrollContainer::-webkit-scrollbar {

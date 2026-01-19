@@ -4,19 +4,6 @@ A modern, responsive personal portfolio website built with Docusaurus, React, an
 
 ![Portfolio Preview](static/img/portfolio/preview.jpeg)
 
-## Project Handover  
-
-📄 [Docusaurus Blog Checkliste PDF](<./Docusaurus-Blog-Checkliste.pdf>)
-
-## About
-
-This portfolio website demonstrates modern web development practices with a focus on:
-- Clean, responsive design with mobile-first approach
-- Interactive UI components with smooth animations
-- Type-safe development with TypeScript
-- Modular component architecture using CSS Modules
-- Professional presentation of skills and projects
-
 ## Table of Contents
 
 - [About](#about)
@@ -33,6 +20,16 @@ This portfolio website demonstrates modern web development practices with a focu
   - [Deploy to GitHub Pages](#deploy-to-github-pages)
   - [Deploying using NGINX](#deploying-using-nginx)
 - [Contact](#contact)
+- [Project Handover](#project-handover)
+
+## About
+
+This portfolio website demonstrates modern web development practices with a focus on:
+- Clean, responsive design with mobile-first approach
+- Interactive UI components with smooth animations
+- Type-safe development with TypeScript
+- Modular component architecture using CSS Modules
+- Professional presentation of skills and projects
 
 ## Features
 
@@ -281,5 +278,9 @@ For detailed Docker deployment, follow this [guide](./docs/guides/deploy-docusau
 - GitHub: [github.com/jonathan-priebe](https://github.com/jonathan-priebe)
 
 ---
+
+## Project Handover  
+
+📄 [Docusaurus Blog Checkliste PDF](<./Docusaurus-Blog-Checkliste.pdf>)
 
 **Built with** ❤️ **using Docusaurus, React & TypeScript**
