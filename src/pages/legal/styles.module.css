@@ -1,0 +1,76 @@
+.legalSection {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1b1b1d;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1b1b1d;
+}
+
+.intro {
+  margin-bottom: 32px;
+  line-height: 1.6;
+  color: #1b1b1d;
+}
+
+.infoBlock {
+  margin-bottom: 40px;
+}
+
+.infoBlock h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #1b1b1d;
+}
+
+.infoBlock p {
+  line-height: 1.6;
+  color: #1b1b1d;
+}
+
+.infoBlock a {
+  color: #2196f3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.infoBlock a:hover {
+  color: #1976d2;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .legalSection {
+  background-color: #1b1b1d;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .title {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .intro {
+  color: #e0e0e0;
+}
+
+[data-theme='dark'] .infoBlock h2 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .infoBlock p {
+  color: #e0e0e0;
+}
+
+[data-theme='dark'] .infoBlock a {
+  color: #64b5f6;
+}
+
+[data-theme='dark'] .infoBlock a:hover {
+  color: #90caf9;
+}

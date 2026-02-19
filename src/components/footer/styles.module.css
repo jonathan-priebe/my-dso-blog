@@ -1,0 +1,74 @@
+.footer {
+  background: #262e34;
+  padding: 48px 16px 64px;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.scrollButton {
+  width: 40px;
+  height: 94px;
+  margin: 0 0 5rem 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.scrollButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.scrollButton:active {
+  transform: translateY(0);
+}
+
+.copyright {
+  font-size: 16px;
+  font-weight: 400;
+  color: #cfd8e3;
+  margin-top: 8px;
+}
+
+.legalLink {
+  font-size: 16px;
+  font-weight: 400;
+  color: #cfd8e3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.legalLink:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 996px) {
+  .footer {
+    padding: 32px 20px 48px;
+  }
+
+  .scrollButton {
+    width: 36px;
+    height: 84px;
+  }
+
+  .copyright,
+  .legalLink {
+    font-size: 13px;
+  }
+}

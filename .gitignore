@@ -3,6 +3,7 @@
 
 # Production
 /build
+**/need_and_stuff/
 
 # Generated files
 .docusaurus
